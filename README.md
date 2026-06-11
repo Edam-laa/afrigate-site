@@ -1,36 +1,211 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Afrigate Site
 
-## Getting Started
+Site web corporate B2B pour **Afrigate Partner by Infinity International Intertrade**.
 
-First, run the development server:
+Le projet présente l’entreprise, ses services, ses catégories de produits, ses coordonnées et ses formulaires de contact / demande de devis.
+
+## Stack technique
+
+* Next.js App Router
+* TypeScript
+* Tailwind CSS
+* Nodemailer
+* Vercel
+* GitHub
+
+## Fonctionnalités principales
+
+* Page d’accueil corporate premium
+* Pages internes :
+
+  * À propos
+  * Services
+  * Produits
+  * Détail catégorie produit
+  * Contact
+  * Demande de devis
+* Design responsive desktop / tablette / mobile
+* Sélecteur de langue FR / EN / AR
+* Formulaire Contact
+* Formulaire Demande de devis
+* Envoi email côté serveur via API routes
+* Assets organisés dans `public/images`
+* Vidéo hero dans `public/videos/hero/background-site.mp4`
+
+## Structure du projet
+
+```txt
+src/
+  app/
+    page.tsx
+    layout.tsx
+    globals.css
+    a-propos/
+    services/
+    produits/
+    produits/[slug]/
+    contact/
+    demande-devis/
+    api/
+      contact/
+      demande-devis/
+  components/
+    home/
+    layout/
+    products/
+    quote/
+    ui/
+  data/
+    home.ts
+    navigation.ts
+    productCategories.ts
+    site.ts
+  i18n/
+    LanguageProvider.tsx
+    translations.ts
+    homeTranslations.ts
+    useHomeContent.ts
+  lib/
+    utils.ts
+public/
+  images/
+  videos/
+```
+
+## Installation locale
+
+Installer les dépendances :
+
+```bash
+npm install
+```
+
+Lancer le serveur de développement :
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrir le site :
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```txt
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Commandes utiles
 
-## Learn More
+Vérifier le code :
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Compiler le projet :
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+```
 
-## Deploy on Vercel
+Lancer en local :
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Variables d’environnement
+
+Créer un fichier local :
+
+```txt
+.env.local
+```
+
+Exemple de variables :
+
+```env
+SMTP_HOST=
+SMTP_PORT=
+SMTP_SECURE=
+SMTP_USER=
+SMTP_PASS=
+SMTP_FROM=
+ADMIN_EMAIL=
+QUOTE_RECEIVER_EMAIL=
+CONTACT_RECEIVER_EMAIL=
+```
+
+Important :
+
+* `.env.local` ne doit jamais être envoyé sur GitHub.
+* `.env.example` peut être versionné.
+* Les variables réelles doivent aussi être ajoutées dans Vercel > Project Settings > Environment Variables.
+* Après modification des variables sur Vercel, il faut redeployer le projet.
+
+## Email et formulaires
+
+Les formulaires utilisent des routes API côté serveur :
+
+```txt
+/api/contact
+/api/demande-devis
+```
+
+Les emails sont envoyés via SMTP avec Nodemailer.
+
+Adresse admin prévue :
+
+```txt
+hello@afrigate.tn
+```
+
+## Déploiement
+
+Le projet est prévu pour être déployé sur Vercel.
+
+Configuration recommandée :
+
+```txt
+Framework Preset: Next.js
+Root Directory: ./
+Install Command: npm install
+Build Command: npm run build
+Output Directory: Next.js default
+Branch: main
+```
+
+Après import GitHub dans Vercel :
+
+1. Ajouter les variables d’environnement.
+2. Lancer le premier déploiement.
+3. Tester toutes les pages.
+4. Tester les formulaires Contact et Demande de devis.
+5. Connecter le domaine final.
+
+## Repository
+
+```txt
+https://github.com/Edam-laa/afrigate-site
+```
+
+## Notes de développement
+
+Le suivi technique du projet est documenté dans :
+
+```txt
+DEV_NOTES.md
+```
+
+## Sécurité
+
+Ne jamais pousser sur GitHub :
+
+```txt
+.env
+.env.local
+.env.production
+.vercel
+node_modules
+.next
+```
+
+Les secrets SMTP doivent rester uniquement dans `.env.local` en local et dans les Environment Variables de Vercel.
