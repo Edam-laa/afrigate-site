@@ -33,896 +33,666 @@ export type ProductCategory = {
   };
 };
 
-export type LocalizedProductItem = {
-  name: string;
-  description: string;
-  image: string;
-};
-
-export type LocalizedProductCategory = {
-  title: string;
-  slug: string;
-  description: string;
-  image: string;
-  products: LocalizedProductItem[];
-};
-
 export const productCategories: ProductCategory[] = [
   {
     title: "Matériaux de construction",
     slug: "materiaux-construction",
     description:
-      "Matériaux, panneaux, bois, portes et solutions de finition pour les projets de construction, d’aménagement et d’approvisionnement B2B.",
-    image: "/images/categories/5.4.png",
+      "Une sélection de matériaux essentiels pour les projets de bâtiment, gros œuvre, finition et approvisionnement de chantier.",
+    image: "/images/products/1.jpeg",
     translations: {
       en: {
         title: "Construction materials",
         description:
-          "Materials, panels, wood, doors and finishing solutions for construction, development and B2B procurement projects.",
+          "A selection of essential materials for building projects, structural works, finishing and construction site procurement.",
         products: [
           {
-            name: "Pool and waterproofing",
+            name: "Construction site materials",
             description:
-              "Solutions for pool projects, coatings, protection and waterproofing needs.",
+              "Basic products intended for construction works and site procurement.",
           },
           {
-            name: "Floor coverings",
+            name: "Structural work materials",
             description:
-              "Covering products for residential, professional and commercial projects.",
+              "Solutions adapted to the structural needs of building projects.",
           },
           {
-            name: "Wood and panels",
+            name: "Finishing products",
             description:
-              "Supply of wood, panels and related materials for construction and interior projects.",
+              "Materials intended for finishing, renovation and interior works.",
           },
           {
-            name: "Finishing wood",
+            name: "Complementary equipment",
             description:
-              "Wood products for finishing, joinery, decoration and specific technical needs.",
+              "Products and accessories used to complete construction site needs.",
           },
           {
-            name: "Special joinery",
+            name: "Professional solutions",
             description:
-              "Joinery solutions and specific elements for architectural projects.",
-          },
-          {
-            name: "Construction panels",
-            description:
-              "Technical panels for partitions, interior layouts and construction applications.",
-          },
-          {
-            name: "Doors",
-            description:
-              "Doors and access solutions for residential, commercial and professional buildings.",
-          },
-          {
-            name: "Interior doors",
-            description:
-              "Interior door range for finishing and interior design projects.",
+              "Supplies selected for companies, distributors and B2B projects.",
           },
         ],
       },
       ar: {
         title: "مواد البناء",
         description:
-          "مواد وألواح وخشب وأبواب وحلول تشطيب لمشاريع البناء والتهيئة والتوريد المهني.",
+          "مجموعة من المواد الأساسية لمشاريع البناء والأشغال الكبرى والتشطيب وتموين مواقع العمل.",
         products: [
           {
-            name: "المسابح والعزل",
+            name: "مواد مواقع البناء",
             description:
-              "حلول مناسبة لمشاريع المسابح والطلاءات والحماية واحتياجات العزل.",
+              "منتجات أساسية موجهة لأعمال البناء وتموين مواقع العمل.",
           },
           {
-            name: "الأرضيات والتغليف",
+            name: "مواد الأشغال الكبرى",
             description:
-              "منتجات تغليف وأرضيات للمشاريع السكنية والمهنية والتجارية.",
+              "حلول مناسبة للاحتياجات الهيكلية لمشاريع البناء.",
           },
           {
-            name: "الخشب والألواح",
+            name: "منتجات التشطيب",
             description:
-              "توريد الخشب والألواح ومشتقاتها للبناء والتهيئة.",
+              "مواد موجهة لأعمال التشطيب والتجديد والتهيئة.",
           },
           {
-            name: "خشب التشطيب",
+            name: "معدات مكملة",
             description:
-              "منتجات خشبية للتشطيب والنجارة والديكور والاحتياجات التقنية الخاصة.",
+              "منتجات وإكسسوارات مفيدة لاستكمال احتياجات موقع العمل.",
           },
           {
-            name: "نجارة خاصة",
+            name: "حلول للمهنيين",
             description:
-              "حلول نجارة وعناصر خاصة للمشاريع المعمارية.",
-          },
-          {
-            name: "ألواح البناء",
-            description:
-              "ألواح تقنية للقواطع والتهيئة الداخلية وتطبيقات البناء.",
-          },
-          {
-            name: "الأبواب",
-            description:
-              "أبواب وحلول دخول للمباني السكنية والتجارية والمهنية.",
-          },
-          {
-            name: "الأبواب الداخلية",
-            description:
-              "مجموعة أبواب داخلية لمشاريع التشطيب والتهيئة.",
+              "لوازم مختارة للشركات والموزعين ومشاريع B2B.",
           },
         ],
       },
     },
     products: [
       {
-        name: "Piscine et étanchéité",
+        name: "Matériaux de chantier",
         description:
-          "Solutions adaptées aux projets de piscines, revêtements, protection et besoins d’étanchéité.",
-        image: "/images/categories/4.6.png",
-        translations: {
-          en: {
-            name: "Pool and waterproofing",
-            description:
-              "Solutions for pool projects, coatings, protection and waterproofing needs.",
-          },
-          ar: {
-            name: "المسابح والعزل",
-            description:
-              "حلول مناسبة لمشاريع المسابح والطلاءات والحماية واحتياجات العزل.",
-          },
-        },
+          "Produits de base destinés aux travaux de construction et à l’approvisionnement des chantiers.",
+        image: "/images/categories/1.2.jpg",
       },
       {
-        name: "Revêtements et sols",
+        name: "Matériaux de gros œuvre",
         description:
-          "Produits de revêtement pour projets résidentiels, professionnels et commerciaux.",
-        image: "/images/categories/4.7.png",
-        translations: {
-          en: {
-            name: "Floor coverings",
-            description:
-              "Covering products for residential, professional and commercial projects.",
-          },
-          ar: {
-            name: "الأرضيات والتغليف",
-            description:
-              "منتجات تغليف وأرضيات للمشاريع السكنية والمهنية والتجارية.",
-          },
-        },
+          "Solutions adaptées aux besoins structurels des projets de bâtiment.",
+        image: "/images/categories/1.2.jpg",
       },
       {
-        name: "Bois et panneaux",
+        name: "Produits de finition",
         description:
-          "Approvisionnement en bois, panneaux et dérivés pour l’aménagement et la construction.",
-        image: "/images/categories/5.1.png",
-        translations: {
-          en: {
-            name: "Wood and panels",
-            description:
-              "Supply of wood, panels and related materials for construction and interior projects.",
-          },
-          ar: {
-            name: "الخشب والألواح",
-            description:
-              "توريد الخشب والألواح ومشتقاتها للبناء والتهيئة.",
-          },
-        },
+          "Matériaux destinés aux travaux de finition, rénovation et aménagement.",
+        image: "/images/categories/1.3.jpg",
       },
       {
-        name: "Bois de finition",
+        name: "Équipements complémentaires",
         description:
-          "Produits bois pour finitions, menuiserie, décoration et besoins techniques spécifiques.",
-        image: "/images/categories/5.2.png",
-        translations: {
-          en: {
-            name: "Finishing wood",
-            description:
-              "Wood products for finishing, joinery, decoration and specific technical needs.",
-          },
-          ar: {
-            name: "خشب التشطيب",
-            description:
-              "منتجات خشبية للتشطيب والنجارة والديكور والاحتياجات التقنية الخاصة.",
-          },
-        },
+          "Produits et accessoires utiles pour compléter les besoins du chantier.",
+        image: "/images/categories/1.4.jpg",
       },
       {
-        name: "Menuiserie spéciale",
+        name: "Solutions pour professionnels",
         description:
-          "Solutions de menuiserie et éléments spécifiques pour projets architecturaux.",
-        image: "/images/categories/5.3.png",
-        translations: {
-          en: {
-            name: "Special joinery",
-            description:
-              "Joinery solutions and specific elements for architectural projects.",
-          },
-          ar: {
-            name: "نجارة خاصة",
-            description:
-              "حلول نجارة وعناصر خاصة للمشاريع المعمارية.",
-          },
-        },
-      },
-      {
-        name: "Panneaux de construction",
-        description:
-          "Panneaux techniques pour cloisons, aménagement intérieur et applications de construction.",
-        image: "/images/categories/5.4.png",
-        translations: {
-          en: {
-            name: "Construction panels",
-            description:
-              "Technical panels for partitions, interior layouts and construction applications.",
-          },
-          ar: {
-            name: "ألواح البناء",
-            description:
-              "ألواح تقنية للقواطع والتهيئة الداخلية وتطبيقات البناء.",
-          },
-        },
-      },
-      {
-        name: "Portes",
-        description:
-          "Portes et solutions d’accès pour bâtiments résidentiels, commerciaux et professionnels.",
-        image: "/images/categories/5.5.png",
-        translations: {
-          en: {
-            name: "Doors",
-            description:
-              "Doors and access solutions for residential, commercial and professional buildings.",
-          },
-          ar: {
-            name: "الأبواب",
-            description:
-              "أبواب وحلول دخول للمباني السكنية والتجارية والمهنية.",
-          },
-        },
-      },
-      {
-        name: "Portes intérieures",
-        description:
-          "Gamme de portes intérieures pour projets de finition et d’aménagement.",
-        image: "/images/categories/5.6.png",
-        translations: {
-          en: {
-            name: "Interior doors",
-            description:
-              "Interior door range for finishing and interior design projects.",
-          },
-          ar: {
-            name: "الأبواب الداخلية",
-            description:
-              "مجموعة أبواب داخلية لمشاريع التشطيب والتهيئة.",
-          },
-        },
+          "Fournitures sélectionnées pour les entreprises, distributeurs et projets B2B.",
+        image: "/images/categories/1.5.jpg",
       },
     ],
   },
   {
-    title: "Outillage et équipement",
-    slug: "outillage-equipement",
+    title: "Blocs de construction",
+    slug: "blocs-construction",
     description:
-      "Outillage, équipements techniques, isolation et accessoires utiles aux chantiers, ateliers et interventions professionnelles.",
-    image: "/images/categories/5.7.png",
+      "Blocs, briques et éléments de maçonnerie adaptés aux projets de bâtiment, infrastructures et gros œuvre.",
+    image: "/images/products/2.jpeg",
     translations: {
       en: {
-        title: "Tools and equipment",
+        title: "Construction blocks",
         description:
-          "Tools, technical equipment, insulation and accessories for worksites, workshops and professional operations.",
+          "Blocks, bricks and masonry elements adapted to building projects, infrastructure and structural works.",
         products: [
           {
-            name: "Professional tools",
+            name: "Standard blocks",
             description:
-              "Manual and power tools for technical use, maintenance and worksites.",
+              "Resistant blocks for walls, partitions and general masonry works.",
           },
           {
-            name: "Technical equipment",
+            name: "Structural blocks",
             description:
-              "Equipment and accessories for professional operational needs.",
+              "Solutions intended for structural projects and professional construction.",
           },
           {
-            name: "Insulation",
+            name: "Bricks and masonry elements",
             description:
-              "Insulation solutions for construction, renovation and thermal protection projects.",
+              "Products adapted to new builds, extensions and renovation projects.",
+          },
+          {
+            name: "Technical blocks",
+            description:
+              "Elements meeting specific needs of construction sites and infrastructure.",
+          },
+          {
+            name: "Masonry solutions",
+            description:
+              "Product range for construction professionals and distributors.",
           },
         ],
       },
       ar: {
-        title: "الأدوات والمعدات",
+        title: "بلوكات البناء",
         description:
-          "أدوات ومعدات تقنية وعزل وإكسسوارات موجهة للمواقع والورشات والعمليات المهنية.",
+          "بلوكات وطوب وعناصر بناء مناسبة لمشاريع البناء والبنية التحتية والأشغال الكبرى.",
         products: [
           {
-            name: "أدوات مهنية",
+            name: "بلوكات قياسية",
             description:
-              "أدوات يدوية وكهربائية للاستخدامات التقنية والصيانة والمواقع.",
+              "بلوكات مقاومة للجدران والقواطع وأعمال البناء العامة.",
           },
           {
-            name: "معدات تقنية",
+            name: "بلوكات الأشغال الكبرى",
             description:
-              "معدات وإكسسوارات موجهة للاحتياجات التشغيلية المهنية.",
+              "حلول موجهة للمشاريع الهيكلية والبناء المهني.",
           },
           {
-            name: "العزل",
+            name: "طوب وعناصر بناء",
             description:
-              "حلول عزل لمشاريع البناء والتجديد والحماية الحرارية.",
+              "منتجات مناسبة للبناء الجديد والتوسعة ومشاريع التجديد.",
+          },
+          {
+            name: "بلوكات تقنية",
+            description:
+              "عناصر تلبي الاحتياجات الخاصة لمواقع العمل والبنية التحتية.",
+          },
+          {
+            name: "حلول البناء",
+            description:
+              "مجموعة منتجات لمهنيي البناء والموزعين.",
           },
         ],
       },
     },
     products: [
       {
-        name: "Outillage professionnel",
+        name: "Blocs standards",
         description:
-          "Outillage manuel et électroportatif pour usages techniques, maintenance et chantiers.",
-        image: "/images/categories/5.7.png",
-        translations: {
-          en: {
-            name: "Professional tools",
-            description:
-              "Manual and power tools for technical use, maintenance and worksites.",
-          },
-          ar: {
-            name: "أدوات مهنية",
-            description:
-              "أدوات يدوية وكهربائية للاستخدامات التقنية والصيانة والمواقع.",
-          },
-        },
+          "Blocs résistants pour murs, cloisons et travaux de maçonnerie générale.",
+        image: "/images/categories/2.1.jpg",
       },
       {
-        name: "Équipements techniques",
+        name: "Blocs de gros œuvre",
         description:
-          "Équipements et accessoires destinés aux besoins opérationnels des professionnels.",
-        image: "/images/categories/5.8.png",
-        translations: {
-          en: {
-            name: "Technical equipment",
-            description:
-              "Equipment and accessories for professional operational needs.",
-          },
-          ar: {
-            name: "معدات تقنية",
-            description:
-              "معدات وإكسسوارات موجهة للاحتياجات التشغيلية المهنية.",
-          },
-        },
+          "Solutions destinées aux projets structurels et aux constructions professionnelles.",
+        image: "/images/categories/2.2.jpg",
       },
       {
-        name: "Isolation",
+        name: "Briques et éléments maçonnés",
         description:
-          "Solutions d’isolation pour projets de construction, rénovation et protection thermique.",
-        image: "/images/categories/6.1.png",
-        translations: {
-          en: {
-            name: "Insulation",
-            description:
-              "Insulation solutions for construction, renovation and thermal protection projects.",
-          },
-          ar: {
-            name: "العزل",
-            description:
-              "حلول عزل لمشاريع البناء والتجديد والحماية الحرارية.",
-          },
-        },
+          "Produits adaptés aux constructions neuves, extensions et projets de rénovation.",
+        image: "/images/categories/2.3.jpg",
+      },
+      {
+        name: "Blocs techniques",
+        description:
+          "Éléments répondant aux besoins spécifiques des chantiers et infrastructures.",
+        image: "/images/categories/2.4.jpg",
+      },
+      {
+        name: "Solutions de maçonnerie",
+        description:
+          "Gamme de produits pour professionnels du bâtiment et distributeurs.",
+        image: "/images/categories/2.5.jpg",
       },
     ],
   },
   {
-    title: "Plomberie et sanitaire",
-    slug: "plomberie-sanitaire",
+    title: "Acier & Armatures",
+    slug: "acier-armatures",
     description:
-      "Produits et accessoires pour installations sanitaires, raccordements, robinetterie et équipements de plomberie.",
-    image: "/images/categories/6.3.png",
+      "Barres d’acier, ferraillage et solutions métalliques pour le renforcement du béton et les projets de construction.",
+    image: "/images/products/3.jpeg",
     translations: {
       en: {
-        title: "Plumbing and sanitary",
+        title: "Steel & reinforcements",
         description:
-          "Products and accessories for sanitary installations, fittings, faucets and plumbing equipment.",
+          "Steel bars, rebar and metal solutions for concrete reinforcement and construction projects.",
         products: [
+          {
+            name: "Steel bars",
+            description:
+              "Steel products intended for reinforced concrete structures.",
+          },
+          {
+            name: "Rebar",
+            description:
+              "Metal solutions for foundations, columns, beams and slabs.",
+          },
+          {
+            name: "Metal reinforcements",
+            description:
+              "Products adapted to structural works and infrastructure projects.",
+          },
+          {
+            name: "Construction site steel",
+            description:
+              "Metal supplies selected for construction professionals.",
+          },
+        ],
+      },
+      ar: {
+        title: "الفولاذ والتسليح",
+        description:
+          "قضبان فولاذ وحديد تسليح وحلول معدنية لتدعيم الخرسانة ومشاريع البناء.",
+        products: [
+          {
+            name: "قضبان فولاذ",
+            description:
+              "فولاذ موجه لتدعيم المنشآت من الخرسانة المسلحة.",
+          },
+          {
+            name: "حديد تسليح",
+            description:
+              "حلول معدنية للأساسات والأعمدة والعوارض والبلاطات.",
+          },
+          {
+            name: "تسليحات معدنية",
+            description:
+              "منتجات مناسبة للأشغال الكبرى ومشاريع البنية التحتية.",
+          },
+          {
+            name: "فولاذ لمواقع العمل",
+            description:
+              "لوازم معدنية مختارة لمهنيي البناء.",
+          },
+        ],
+      },
+    },
+    products: [
+      {
+        name: "Barres d’acier",
+        description:
+          "Aciers destinés au renforcement des ouvrages en béton armé.",
+        image: "/images/categories/3.1.jpg",
+      },
+      {
+        name: "Ferraillage",
+        description:
+          "Solutions métalliques pour fondations, poteaux, poutres et dalles.",
+        image: "/images/categories/3.2.jpg",
+      },
+      {
+        name: "Armatures métalliques",
+        description:
+          "Produits adaptés aux besoins des projets de gros œuvre et infrastructures.",
+        image: "/images/categories/3.3.jpg",
+      },
+      {
+        name: "Aciers pour chantier",
+        description:
+          "Fournitures métalliques sélectionnées pour les professionnels du bâtiment.",
+        image: "/images/categories/3.4.jpg",
+      },
+    ],
+  },
+  {
+    title: "Tuyauterie",
+    slug: "tuyauterie",
+    description:
+      "Tubes, conduits, raccords et solutions techniques pour réseaux, plomberie, évacuation et installation professionnelle.",
+    image: "/images/products/4.jpeg",
+    translations: {
+      en: {
+        title: "Piping",
+        description:
+          "Pipes, conduits, fittings and technical solutions for networks, plumbing, drainage and professional installations.",
+        products: [
+          {
+            name: "Technical pipes",
+            description:
+              "Pipes intended for water networks, drainage and technical installations.",
+          },
           {
             name: "Fittings and accessories",
             description:
-              "Fittings, technical parts and accessories for plumbing installations.",
+              "Connection accessories for reliable and durable installations.",
           },
           {
-            name: "Faucets and taps",
+            name: "Flexible conduits",
             description:
-              "Faucet and tap products for residential, commercial and professional projects.",
+              "Flexible solutions for routing, protection and network organization.",
+          },
+          {
+            name: "Site pipes",
+            description:
+              "Products adapted to the needs of companies and installers.",
+          },
+          {
+            name: "Network solutions",
+            description:
+              "Range intended for plumbing, building and infrastructure projects.",
+          },
+          {
+            name: "Flexible conduit",
+            description:
+              "Flexible conduit used for protection and routing of installations.",
+          },
+          {
+            name: "Piping accessories",
+            description:
+              "Complementary elements to finalize technical installations.",
           },
         ],
       },
       ar: {
-        title: "السباكة والصحي",
+        title: "الأنابيب",
         description:
-          "منتجات وإكسسوارات للتركيبات الصحية والربط والحنفيات ومعدات السباكة.",
+          "أنابيب وقنوات ووصلات وحلول تقنية للشبكات والسباكة والصرف والتركيبات المهنية.",
         products: [
+          {
+            name: "أنابيب تقنية",
+            description:
+              "أنابيب موجهة لشبكات المياه والصرف والتركيبات التقنية.",
+          },
           {
             name: "وصلات وإكسسوارات",
             description:
-              "وصلات وقطع تقنية وإكسسوارات لتركيبات السباكة.",
+              "إكسسوارات ربط لتركيبات موثوقة ودائمة.",
           },
           {
-            name: "الحنفيات",
+            name: "قنوات مرنة",
             description:
-              "منتجات حنفيات للمشاريع السكنية والتجارية والمهنية.",
+              "حلول مرنة للتمرير والحماية وتنظيم الشبكات.",
+          },
+          {
+            name: "أنابيب مواقع العمل",
+            description:
+              "منتجات مناسبة لاحتياجات الشركات والمركبين.",
+          },
+          {
+            name: "حلول الشبكات",
+            description:
+              "مجموعة موجهة لمشاريع السباكة والبناء والبنية التحتية.",
+          },
+          {
+            name: "قناة مرنة",
+            description:
+              "قناة مرنة تستخدم لحماية وتمرير التركيبات.",
+          },
+          {
+            name: "إكسسوارات الأنابيب",
+            description:
+              "عناصر مكملة لإنهاء التركيبات التقنية.",
           },
         ],
       },
     },
     products: [
+      {
+        name: "Tubes techniques",
+        description:
+          "Tubes destinés aux réseaux d’eau, d’évacuation et aux installations techniques.",
+        image: "/images/categories/4.1.jpg",
+      },
       {
         name: "Raccords et accessoires",
         description:
-          "Raccords, pièces techniques et accessoires pour installations de plomberie.",
-        image: "/images/categories/6.2.png",
-        translations: {
-          en: {
-            name: "Fittings and accessories",
-            description:
-              "Fittings, technical parts and accessories for plumbing installations.",
-          },
-          ar: {
-            name: "وصلات وإكسسوارات",
-            description:
-              "وصلات وقطع تقنية وإكسسوارات لتركيبات السباكة.",
-          },
-        },
+          "Accessoires de raccordement pour installations fiables et durables.",
+        image: "/images/categories/4.2.jpg",
       },
       {
-        name: "Robinetterie",
+        name: "Conduits souples",
         description:
-          "Produits de robinetterie pour projets résidentiels, commerciaux et professionnels.",
-        image: "/images/categories/6.3.png",
-        translations: {
-          en: {
-            name: "Faucets and taps",
-            description:
-              "Faucet and tap products for residential, commercial and professional projects.",
-          },
-          ar: {
-            name: "الحنفيات",
-            description:
-              "منتجات حنفيات للمشاريع السكنية والتجارية والمهنية.",
-          },
-        },
+          "Solutions flexibles pour passage, protection et organisation des réseaux.",
+        image: "/images/categories/4.3.jpg",
+      },
+      {
+        name: "Tubes de chantier",
+        description:
+          "Produits adaptés aux besoins des entreprises et installateurs.",
+        image: "/images/categories/4.4.jpg",
+      },
+      {
+        name: "Solutions de réseaux",
+        description:
+          "Gamme destinée aux projets de plomberie, bâtiment et infrastructure.",
+        image: "/images/categories/4.5.jpg",
+      },
+      {
+        name: "Tube gorge",
+        description:
+          "Conduit souple utilisé pour la protection et le passage des installations.",
+        image: "/images/categories/4.6.jpg",
+      },
+      {
+        name: "Accessoires de tuyauterie",
+        description:
+          "Éléments complémentaires pour finaliser les installations techniques.",
+        image: "/images/categories/4.7.jpg",
       },
     ],
   },
   {
-    title: "Électricité",
-    slug: "electricite",
+    title: "Sanitaire & Plomberie",
+    slug: "sanitaire-plomberie",
     description:
-      "Produits électriques destinés aux bâtiments, installations techniques, chantiers et projets industriels.",
-    image: "/images/categories/6.4.png",
+      "Équipements sanitaires, accessoires de plomberie et produits d’étanchéité pour installations professionnelles.",
+    image: "/images/products/5.jpeg",
     translations: {
       en: {
-        title: "Electrical products",
+        title: "Sanitary & plumbing",
         description:
-          "Electrical products for buildings, technical installations, worksites and industrial projects.",
+          "Sanitary equipment, plumbing accessories and sealing products for professional installations.",
         products: [
           {
-            name: "Panels and electrical components",
+            name: "Sanitary equipment",
             description:
-              "Electrical solutions for distribution, protection and professional installation.",
+              "Products intended for residential, commercial and professional sanitary installations.",
+          },
+          {
+            name: "Plumbing accessories",
+            description:
+              "Solutions for connection, installation and maintenance of water networks.",
+          },
+          {
+            name: "Sealing products",
+            description:
+              "Accessories used to secure fittings and limit leaks.",
+          },
+          {
+            name: "Plumbing hemp",
+            description:
+              "Sealing product used for threaded connections.",
+          },
+          {
+            name: "Sanitary connection",
+            description:
+              "Elements intended for sanitary installations and technical networks.",
+          },
+          {
+            name: "B2B plumbing solutions",
+            description:
+              "Range designed for distributors, companies and professional projects.",
+          },
+          {
+            name: "Technical accessories",
+            description:
+              "Complementary products for installation, maintenance and finishing.",
           },
         ],
       },
       ar: {
-        title: "الكهرباء",
+        title: "الصحي والسباكة",
         description:
-          "منتجات كهربائية للمباني والتركيبات التقنية والمواقع والمشاريع الصناعية.",
+          "معدات صحية وإكسسوارات سباكة ومنتجات عزل للتركيبات المهنية.",
         products: [
           {
-            name: "لوحات ومكونات كهربائية",
+            name: "معدات صحية",
             description:
-              "حلول كهربائية للتوزيع والحماية والتركيب المهني.",
+              "منتجات موجهة للتركيبات الصحية السكنية والتجارية والمهنية.",
+          },
+          {
+            name: "إكسسوارات السباكة",
+            description:
+              "حلول للربط والتركيب وصيانة شبكات المياه.",
+          },
+          {
+            name: "منتجات العزل",
+            description:
+              "إكسسوارات تستخدم لتأمين الوصلات والحد من التسربات.",
+          },
+          {
+            name: "كتان السباكة",
+            description:
+              "منتج عزل يستخدم في الوصلات الملولبة.",
+          },
+          {
+            name: "ربط صحي",
+            description:
+              "عناصر موجهة للتركيبات الصحية والشبكات التقنية.",
+          },
+          {
+            name: "حلول سباكة B2B",
+            description:
+              "مجموعة مصممة للموزعين والشركات والمشاريع المهنية.",
+          },
+          {
+            name: "إكسسوارات تقنية",
+            description:
+              "منتجات مكملة للتركيب والصيانة والتشطيب.",
           },
         ],
       },
     },
     products: [
       {
-        name: "Tableaux et composants électriques",
+        name: "Équipements sanitaires",
         description:
-          "Solutions électriques pour distribution, protection et installation professionnelle.",
-        image: "/images/categories/6.4.png",
-        translations: {
-          en: {
-            name: "Panels and electrical components",
-            description:
-              "Electrical solutions for distribution, protection and professional installation.",
-          },
-          ar: {
-            name: "لوحات ومكونات كهربائية",
-            description:
-              "حلول كهربائية للتوزيع والحماية والتركيب المهني.",
-          },
-        },
+          "Produits destinés aux installations sanitaires résidentielles, commerciales et professionnelles.",
+        image: "/images/categories/5.1.jpg",
+      },
+      {
+        name: "Accessoires de plomberie",
+        description:
+          "Solutions pour raccordement, installation et maintenance des réseaux d’eau.",
+        image: "/images/categories/5.2.jpg",
+      },
+      {
+        name: "Produits d’étanchéité",
+        description:
+          "Accessoires utilisés pour sécuriser les raccords et limiter les fuites.",
+        image: "/images/categories/5.3.jpg",
+      },
+      {
+        name: "Filasse plomberie",
+        description:
+          "Produit d’étanchéité utilisé pour les raccordements filetés.",
+        image: "/images/categories/5.4.webp",
+      },
+      {
+        name: "Raccordement sanitaire",
+        description:
+          "Éléments destinés aux installations sanitaires et aux réseaux techniques.",
+        image: "/images/categories/5.5.jpg",
+      },
+      {
+        name: "Solutions plomberie B2B",
+        description:
+          "Gamme pensée pour distributeurs, entreprises et projets professionnels.",
+        image: "/images/categories/5.6.jpg",
+      },
+      {
+        name: "Accessoires techniques",
+        description:
+          "Produits complémentaires pour installation, entretien et finition.",
+        image: "/images/categories/5.7.jpg",
       },
     ],
   },
   {
-    title: "Produits cosmétiques",
-    slug: "produits-cosmetiques",
+    title: "Boiserie & Accessoires",
+    slug: "boiserie-accessoires",
     description:
-      "Gammes cosmétiques, soins, hygiène, beauté et produits professionnels destinés aux distributeurs, détaillants et partenaires B2B.",
-    image: "/images/categories/7.1.png",
+      "Bois, panneaux, accessoires et équipements complémentaires pour construction, finition et aménagement.",
+    image: "/images/products/6.jpeg",
     translations: {
       en: {
-        title: "Cosmetic products",
+        title: "Woodwork & accessories",
         description:
-          "Cosmetic ranges, care, hygiene, beauty and professional products for distributors, retailers and B2B partners.",
+          "Wood, panels, accessories and complementary equipment for construction, finishing and interior works.",
         products: [
           {
-            name: "Care and hygiene",
+            name: "Construction wood",
             description:
-              "Cosmetic and hygiene products selected for professional distribution channels.",
+              "Wood intended for building projects, formwork, structure and interior works.",
           },
           {
-            name: "Beauty products",
+            name: "Panels and wood elements",
             description:
-              "Beauty ranges for retailers, distributors and B2B partners.",
+              "Solutions adapted to finishing works, furniture and layout projects.",
           },
           {
-            name: "Cosmetic sourcing",
+            name: "Wood accessories",
             description:
-              "Product support for partners wishing to structure reliable cosmetic sourcing.",
+              "Complementary products for installation, finishing and fitting.",
           },
           {
-            name: "Hair care",
+            name: "Complementary equipment",
             description:
-              "Hair care products adapted to distributors and beauty professionals.",
-          },
-          {
-            name: "Face and body care",
-            description:
-              "Selection of care products for personal, professional and distribution needs.",
-          },
-          {
-            name: "Perfumes",
-            description:
-              "Perfume products and related ranges for sales and distribution channels.",
-          },
-          {
-            name: "Professional products",
-            description:
-              "Cosmetic products for professional use, salons and specialized partners.",
+              "Practical solutions for construction and interior works professionals.",
           },
         ],
       },
       ar: {
-        title: "منتجات التجميل",
+        title: "الأخشاب والإكسسوارات",
         description:
-          "مجموعة منتجات تجميل وعناية ونظافة وجمال موجهة للموزعين وتجار التجزئة وشركاء الأعمال.",
+          "خشب وألواح وإكسسوارات ومعدات مكملة للبناء والتشطيب والتهيئة.",
         products: [
           {
-            name: "العناية والنظافة",
+            name: "خشب البناء",
             description:
-              "منتجات تجميل ونظافة مختارة لقنوات التوزيع المهنية.",
+              "خشب موجه لمشاريع البناء والقوالب والهياكل والتهيئة.",
           },
           {
-            name: "منتجات الجمال",
+            name: "ألواح وعناصر خشبية",
             description:
-              "منتجات جمال موجهة لتجار التجزئة والموزعين وشركاء الأعمال.",
+              "حلول مناسبة لأعمال التشطيب والأثاث والتجهيز.",
           },
           {
-            name: "توريد مستحضرات التجميل",
+            name: "إكسسوارات خشبية",
             description:
-              "مرافقة للشركاء الراغبين في تنظيم طلبات مستحضرات تجميل موثوقة.",
+              "منتجات مكملة للتركيب والتشطيب والتثبيت.",
           },
           {
-            name: "العناية بالشعر",
+            name: "معدات مكملة",
             description:
-              "منتجات عناية بالشعر موجهة للموزعين ومحترفي التجميل.",
-          },
-          {
-            name: "العناية بالوجه والجسم",
-            description:
-              "تشكيلة منتجات عناية للاستعمال الشخصي والمهني والتوزيع.",
-          },
-          {
-            name: "العطور",
-            description:
-              "منتجات عطرية ومجموعات مرتبطة بها لقنوات البيع والتوزيع.",
-          },
-          {
-            name: "منتجات مهنية",
-            description:
-              "منتجات تجميل موجهة للاستعمال المهني والصالونات والشركاء المختصين.",
+              "حلول عملية لمهنيي البناء والتهيئة.",
           },
         ],
       },
     },
     products: [
       {
-        name: "Soins et hygiène",
+        name: "Bois de construction",
         description:
-          "Produits cosmétiques et d’hygiène sélectionnés pour les circuits de distribution professionnels.",
-        image: "/images/categories/7.1.png",
-        translations: {
-          en: {
-            name: "Care and hygiene",
-            description:
-              "Cosmetic and hygiene products selected for professional distribution channels.",
-          },
-          ar: {
-            name: "العناية والنظافة",
-            description:
-              "منتجات تجميل ونظافة مختارة لقنوات التوزيع المهنية.",
-          },
-        },
+          "Bois destiné aux projets de bâtiment, coffrage, structure et aménagement.",
+        image: "/images/categories/6.1.jpg",
       },
       {
-        name: "Produits beauté",
+        name: "Panneaux et éléments bois",
         description:
-          "Gammes beauté destinées aux détaillants, distributeurs et partenaires B2B.",
-        image: "/images/categories/7.2.png",
-        translations: {
-          en: {
-            name: "Beauty products",
-            description:
-              "Beauty ranges for retailers, distributors and B2B partners.",
-          },
-          ar: {
-            name: "منتجات الجمال",
-            description:
-              "منتجات جمال موجهة لتجار التجزئة والموزعين وشركاء الأعمال.",
-          },
-        },
+          "Solutions adaptées aux travaux de finition, mobilier et agencement.",
+        image: "/images/categories/6.2.jpg",
       },
       {
-        name: "Approvisionnement cosmétique",
+        name: "Accessoires bois",
         description:
-          "Accompagnement produit pour les partenaires qui souhaitent structurer une demande cosmétique fiable.",
-        image: "/images/categories/7.3.png",
-        translations: {
-          en: {
-            name: "Cosmetic sourcing",
-            description:
-              "Product support for partners wishing to structure reliable cosmetic sourcing.",
-          },
-          ar: {
-            name: "توريد مستحضرات التجميل",
-            description:
-              "مرافقة للشركاء الراغبين في تنظيم طلبات مستحضرات تجميل موثوقة.",
-          },
-        },
+          "Produits complémentaires pour pose, finition et installation.",
+        image: "/images/categories/6.3.webp",
       },
       {
-        name: "Soins capillaires",
+        name: "Équipements complémentaires",
         description:
-          "Produits capillaires adaptés aux distributeurs et professionnels de la beauté.",
-        image: "/images/categories/7.4.png",
-        translations: {
-          en: {
-            name: "Hair care",
-            description:
-              "Hair care products adapted to distributors and beauty professionals.",
-          },
-          ar: {
-            name: "العناية بالشعر",
-            description:
-              "منتجات عناية بالشعر موجهة للموزعين ومحترفي التجميل.",
-          },
-        },
-      },
-      {
-        name: "Soins visage et corps",
-        description:
-          "Sélection de produits de soin pour usages personnels, professionnels et distribution.",
-        image: "/images/categories/7.5.png",
-        translations: {
-          en: {
-            name: "Face and body care",
-            description:
-              "Selection of care products for personal, professional and distribution needs.",
-          },
-          ar: {
-            name: "العناية بالوجه والجسم",
-            description:
-              "تشكيلة منتجات عناية للاستعمال الشخصي والمهني والتوزيع.",
-          },
-        },
-      },
-      {
-        name: "Parfums",
-        description:
-          "Produits parfumés et gammes associées pour circuits de vente et distribution.",
-        image: "/images/categories/7.6.png",
-        translations: {
-          en: {
-            name: "Perfumes",
-            description:
-              "Perfume products and related ranges for sales and distribution channels.",
-          },
-          ar: {
-            name: "العطور",
-            description:
-              "منتجات عطرية ومجموعات مرتبطة بها لقنوات البيع والتوزيع.",
-          },
-        },
-      },
-      {
-        name: "Produits professionnels",
-        description:
-          "Produits cosmétiques destinés aux usages professionnels, salons et partenaires spécialisés.",
-        image: "/images/categories/7.7.png",
-        translations: {
-          en: {
-            name: "Professional products",
-            description:
-              "Cosmetic products for professional use, salons and specialized partners.",
-          },
-          ar: {
-            name: "منتجات مهنية",
-            description:
-              "منتجات تجميل موجهة للاستعمال المهني والصالونات والشركاء المختصين.",
-          },
-        },
-      },
-    ],
-  },
-  {
-    title: "Produits alimentaires",
-    slug: "produits-alimentaires",
-    description:
-      "Produits alimentaires secs, emballés, huiles et conserves pour les besoins de distribution, commerce et approvisionnement professionnel.",
-    image: "/images/categories/8.1.png",
-    translations: {
-      en: {
-        title: "Food products",
-        description:
-          "Dry food products, packaged products, oils and canned goods for distribution, trade and professional sourcing needs.",
-        products: [
-          {
-            name: "Dry food products",
-            description:
-              "Food products adapted to distribution, trade and professional sourcing needs.",
-          },
-          {
-            name: "Packaged food products",
-            description:
-              "Packaged food ranges for B2B partners and international sourcing requests.",
-          },
-          {
-            name: "Edible oils",
-            description:
-              "Supply of edible oils for distributors, wholesalers and commercial partners.",
-          },
-          {
-            name: "Canned food",
-            description:
-              "Canned food products for distribution channels and multi-market sourcing.",
-          },
-          {
-            name: "Canned fish",
-            description:
-              "Canned fish products for distribution and export markets.",
-          },
-        ],
-      },
-      ar: {
-        title: "المنتجات الغذائية",
-        description:
-          "منتجات غذائية جافة ومعبأة وزيوت ومعلبات موجهة للتوزيع والتجارة والتوريد المهني.",
-        products: [
-          {
-            name: "مواد غذائية جافة",
-            description:
-              "منتجات غذائية موجهة للتوزيع والتجارة والتوريد المهني.",
-          },
-          {
-            name: "منتجات غذائية معبأة",
-            description:
-              "منتجات غذائية معبأة موجهة لشركاء الأعمال وطلبات التوريد الدولي.",
-          },
-          {
-            name: "زيوت غذائية",
-            description:
-              "توريد زيوت غذائية للموزعين وتجار الجملة والشركاء التجاريين.",
-          },
-          {
-            name: "المعلبات الغذائية",
-            description:
-              "منتجات معلبة لقنوات التوزيع والتوريد في عدة أسواق.",
-          },
-          {
-            name: "معلبات السمك",
-            description:
-              "منتجات سمك معلب موجهة لأسواق التوزيع والتصدير.",
-          },
-        ],
-      },
-    },
-    products: [
-      {
-        name: "Produits secs",
-        description:
-          "Produits alimentaires adaptés aux besoins de distribution, de commerce et d’approvisionnement professionnel.",
-        image: "/images/categories/8.1.png",
-        translations: {
-          en: {
-            name: "Dry food products",
-            description:
-              "Food products adapted to distribution, trade and professional sourcing needs.",
-          },
-          ar: {
-            name: "مواد غذائية جافة",
-            description:
-              "منتجات غذائية موجهة للتوزيع والتجارة والتوريد المهني.",
-          },
-        },
-      },
-      {
-        name: "Produits emballés",
-        description:
-          "Gammes alimentaires emballées pour partenaires B2B et demandes d’approvisionnement international.",
-        image: "/images/categories/8.2.png",
-        translations: {
-          en: {
-            name: "Packaged food products",
-            description:
-              "Packaged food ranges for B2B partners and international sourcing requests.",
-          },
-          ar: {
-            name: "منتجات غذائية معبأة",
-            description:
-              "منتجات غذائية معبأة موجهة لشركاء الأعمال وطلبات التوريد الدولي.",
-          },
-        },
-      },
-      {
-        name: "Huiles alimentaires",
-        description:
-          "Approvisionnement en huiles alimentaires pour distributeurs, grossistes et partenaires commerciaux.",
-        image: "/images/categories/8.3.png",
-        translations: {
-          en: {
-            name: "Edible oils",
-            description:
-              "Supply of edible oils for distributors, wholesalers and commercial partners.",
-          },
-          ar: {
-            name: "زيوت غذائية",
-            description:
-              "توريد زيوت غذائية للموزعين وتجار الجملة والشركاء التجاريين.",
-          },
-        },
-      },
-      {
-        name: "Conserves alimentaires",
-        description:
-          "Produits en conserve pour circuits de distribution et approvisionnement multi-marchés.",
-        image: "/images/categories/8.4.png",
-        translations: {
-          en: {
-            name: "Canned food",
-            description:
-              "Canned food products for distribution channels and multi-market sourcing.",
-          },
-          ar: {
-            name: "المعلبات الغذائية",
-            description:
-              "منتجات معلبة لقنوات التوزيع والتوريد في عدة أسواق.",
-          },
-        },
-      },
-      {
-        name: "Conserves de poisson",
-        description:
-          "Produits de poisson en conserve destinés aux marchés de distribution et d’export.",
-        image: "/images/categories/8.5.png",
-        translations: {
-          en: {
-            name: "Canned fish",
-            description:
-              "Canned fish products for distribution and export markets.",
-          },
-          ar: {
-            name: "معلبات السمك",
-            description:
-              "منتجات سمك معلب موجهة لأسواق التوزيع والتصدير.",
-          },
-        },
+          "Solutions pratiques pour les professionnels du bâtiment et de l’aménagement.",
+        image: "/images/categories/6.4.jpg",
       },
     ],
   },
@@ -930,43 +700,28 @@ export const productCategories: ProductCategory[] = [
 
 export function getLocalizedProductCategories(
   language: LanguageCode,
-): LocalizedProductCategory[] {
-  return productCategories.map((category) => {
-    if (language === "fr") {
-      return {
-        title: category.title,
-        slug: category.slug,
-        description: category.description,
-        image: category.image,
-        products: category.products.map((product) => ({
-          name: product.name,
-          description: product.description,
-          image: product.image,
-        })),
-      };
-    }
+): ProductCategory[] {
+  if (language === "fr") {
+    return productCategories;
+  }
 
+  return productCategories.map((category) => {
     const categoryTranslation = category.translations?.[language];
 
     return {
+      ...category,
       title: categoryTranslation?.title ?? category.title,
-      slug: category.slug,
       description: categoryTranslation?.description ?? category.description,
-      image: category.image,
       products: category.products.map((product, index) => {
-        const productTranslation =
-          product.translations?.[language] ?? categoryTranslation?.products[index];
+        const productTranslation = categoryTranslation?.products[index];
 
         return {
+          ...product,
           name: productTranslation?.name ?? product.name,
-          description: productTranslation?.description ?? product.description,
-          image: product.image,
+          description:
+            productTranslation?.description ?? product.description,
         };
       }),
     };
   });
-}
-
-export function getProductCategoryBySlug(slug: string) {
-  return productCategories.find((category) => category.slug === slug);
 }

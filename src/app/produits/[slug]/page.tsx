@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { ProductCategoryContent } from "@/components/products/ProductCategoryContent";
@@ -25,13 +25,12 @@ export async function generateMetadata({
 
   if (!category) {
     return {
-      title:
-        "Catégorie introuvable | Afrigate Partner by Infinity International Intertrade",
+      title: "Catégorie introuvable | Afrigate Partners",
     };
   }
 
   return {
-    title: `${category.title} | Afrigate Partner by Infinity International Intertrade`,
+    title: `${category.title} | Afrigate Partners`,
     description: category.description,
   };
 }

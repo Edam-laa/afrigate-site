@@ -19,6 +19,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import {
   getLocalizedProductCategories,
   productCategories,
+  type LanguageCode,
 } from "@/data/productCategories";
 import { useLanguage } from "@/i18n/LanguageProvider";
 
@@ -83,9 +84,19 @@ const sectors = [
   "productsPage.domains.procurement",
 ];
 
-export default function ProductsPage() {
+function normalizeLanguage(language: string): LanguageCode {
+  if (language === "en" || language === "ar") {
+    return language;
+  }
+
+  return "fr";
+}
+
+export default function ProductsPageContent() {
   const { t, language } = useLanguage();
-  const localizedProductCategories = getLocalizedProductCategories(language);
+  const activeLanguage = normalizeLanguage(language);
+  const localizedProductCategories =
+    getLocalizedProductCategories(activeLanguage);
 
   return (
     <main className="bg-[#F4F6F9]">
@@ -291,9 +302,9 @@ export default function ProductsPage() {
                       </Link>
 
                       <Link
-                        href={`/demande-devis?categorie=${encodeURIComponent(
-                          category.title,
-                        )}`}
+                        href={`/demande-devis?category=${encodeURIComponent(
+                          category.slug,
+                        )}&categorie=${encodeURIComponent(category.title)}`}
                         className="inline-flex min-h-12 items-center justify-center rounded-full border border-slate-200 px-7 text-sm font-black uppercase tracking-[0.14em] text-[#011332] transition hover:border-[#011332] hover:bg-[#011332] hover:text-white"
                       >
                         {t("productsPage.categories.quote")}
