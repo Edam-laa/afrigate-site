@@ -1,126 +1,80 @@
-# Afrigate Site
+# Afrigate — Multilingual B2B Corporate Website
 
-Site web corporate B2B pour **Afrigate Partner by Infinity International Intertrade**.
+**Next.js 16 · React 19 · TypeScript · Tailwind CSS 4 · Nodemailer**
 
-Le projet présente l’entreprise, ses services, ses catégories de produits, ses coordonnées et ses formulaires de contact / demande de devis.
+An import/export business website project built with the **Next.js App Router**. The codebase focuses on a responsive corporate experience, multilingual content, a navigable product-category catalog and server-side contact/quotation request endpoints.
 
-## Stack technique
+> **Portfolio scope:** this repository contains implementation code and static media assets. A public production deployment and end-to-end email delivery were **not independently verified** for this documentation update. The client-facing deployment may require separate permission to share.
 
-* Next.js App Router
-* TypeScript
-* Tailwind CSS
-* Nodemailer
-* Vercel
-* GitHub
+## Product capabilities
 
-## Fonctionnalités principales
+- Responsive home, company, services, products, contact and quotation-request pages.
+- Product-category detail routes using dynamic Next.js slugs.
+- A language selector for **French, English and Arabic**.
+- Server-side endpoints for contact and quotation submissions.
+- SMTP email integration via Nodemailer, requiring valid runtime configuration.
+- Reusable navigation, content, forms and shared UI components.
 
-* Page d’accueil corporate premium
-* Pages internes :
+## System architecture
 
-  * À propos
-  * Services
-  * Produits
-  * Détail catégorie produit
-  * Contact
-  * Demande de devis
-* Design responsive desktop / tablette / mobile
-* Sélecteur de langue FR / EN / AR
-* Formulaire Contact
-* Formulaire Demande de devis
-* Envoi email côté serveur via API routes
-* Assets organisés dans `public/images`
-* Vidéo hero dans `public/videos/hero/background-site.mp4`
+```mermaid
+flowchart LR
+    V["Visitors<br/>Desktop & mobile"] --> N["Next.js App Router<br/>Pages & UI components"]
+    N --> I["Translation and<br/>content modules"]
+    N --> A["API routes<br/>contact / quote request"]
+    A --> E["Nodemailer<br/>SMTP provider"]
+    N --> M["Static product media<br/>public/images"]
+```
 
-## Structure du projet
+This diagram is a simplified view of the repository structure; it is not evidence of a live deployment.
 
-```txt
+## Repository structure
+
+```text
 src/
   app/
-    page.tsx
-    layout.tsx
-    globals.css
-    a-propos/
-    services/
-    produits/
-    produits/[slug]/
-    contact/
-    demande-devis/
-    api/
-      contact/
-      demande-devis/
-  components/
-    home/
-    layout/
-    products/
-    quote/
-    ui/
-  data/
-    home.ts
-    navigation.ts
-    productCategories.ts
-    site.ts
-  i18n/
-    LanguageProvider.tsx
-    translations.ts
-    homeTranslations.ts
-    useHomeContent.ts
-  lib/
-    utils.ts
+    page.tsx                # Home page
+    a-propos/               # About
+    services/               # Services
+    produits/               # Product catalog
+    produits/[slug]/        # Product category pages
+    contact/                # Contact
+    demande-devis/          # Quotation request
+    api/                    # Server endpoints
+  components/               # Reusable UI components
+  data/                     # Business content, categories, navigation
+  i18n/                     # Language provider and translations
+  lib/                      # Shared application helpers
 public/
-  images/
-  videos/
+  images/                   # Product and corporate media
+  videos/                   # Hero media
 ```
 
-## Installation locale
+## Run locally
 
-Installer les dépendances :
-
-```bash
-npm install
-```
-
-Lancer le serveur de développement :
+Requires Node.js compatible with **Next.js 16**, npm and an environment able to run the App Router.
 
 ```bash
+git clone https://github.com/Edam-laa/afrigate-site.git
+cd afrigate-site
+npm ci
 npm run dev
 ```
 
-Ouvrir le site :
+Open `http://localhost:3000`.
 
-```txt
-http://localhost:3000
-```
-
-## Commandes utiles
-
-Vérifier le code :
+Quality checks:
 
 ```bash
 npm run lint
-```
-
-Compiler le projet :
-
-```bash
 npm run build
 ```
 
-Lancer en local :
+These commands are documented for reproduction; successful execution has **not** been independently claimed in this README revision.
 
-```bash
-npm run dev
-```
+## Email configuration
 
-## Variables d’environnement
-
-Créer un fichier local :
-
-```txt
-.env.local
-```
-
-Exemple de variables :
+The API routes use Nodemailer with configuration supplied at runtime. Start from [`.env.example`](.env.example) and create an untracked `.env.local`. The implementation expects SMTP configuration and destination addresses, for example:
 
 ```env
 SMTP_HOST=
@@ -134,78 +88,27 @@ QUOTE_RECEIVER_EMAIL=
 CONTACT_RECEIVER_EMAIL=
 ```
 
-Important :
+Never commit real credentials. Test form validation and end-to-end email delivery in an authorized environment before enabling a public deployment. A successful build does not guarantee delivery.
 
-* `.env.local` ne doit jamais être envoyé sur GitHub.
-* `.env.example` peut être versionné.
-* Les variables réelles doivent aussi être ajoutées dans Vercel > Project Settings > Environment Variables.
-* Après modification des variables sur Vercel, il faut redeployer le projet.
+## UI evidence
 
-## Email et formulaires
+This repository includes authentic **site media assets** but no independently verified screenshot of the rendered desktop/mobile interface. Do not mistake static photographs for proof that a live website is deployed.
 
-Les formulaires utilisent des routes API côté serveur :
+Once an authorized deployment is available, add a real sanitized screenshot or an approved demo URL here; never fabricate a running application screenshot.
 
-```txt
-/api/contact
-/api/demande-devis
-```
+## Engineering decisions
 
-Les emails sont envoyés via SMTP avec Nodemailer.
+- **Next.js App Router:** organizes public pages, nested product-category routes and server endpoints in one application.
+- **TypeScript:** explicit types for maintainable business content and reusable components.
+- **Dedicated i18n layer:** centralizes language switching and translations.
+- **Server-side email handling:** protects the SMTP secret from the client bundle; requires deployment-side environment variables and proper operational safeguards.
 
-Adresse admin prévue :
+## Known limitations and next steps
 
-```txt
-hello@afrigate.tn
-```
+- Confirm a public deployment URL and screenshot-sharing rights.
+- Independently verify desktop/mobile responsiveness and the French/English/Arabic user journeys.
+- Execute lint/build checks on the committed state.
+- Test form error handling, SMTP delivery and spam prevention in a controlled environment.
+- Audit and optimize large media files, especially hero video assets.
 
-## Déploiement
-
-Le projet est prévu pour être déployé sur Vercel.
-
-Configuration recommandée :
-
-```txt
-Framework Preset: Next.js
-Root Directory: ./
-Install Command: npm install
-Build Command: npm run build
-Output Directory: Next.js default
-Branch: main
-```
-
-Après import GitHub dans Vercel :
-
-1. Ajouter les variables d’environnement.
-2. Lancer le premier déploiement.
-3. Tester toutes les pages.
-4. Tester les formulaires Contact et Demande de devis.
-5. Connecter le domaine final.
-
-## Repository
-
-```txt
-https://github.com/Edam-laa/afrigate-site
-```
-
-## Notes de développement
-
-Le suivi technique du projet est documenté dans :
-
-```txt
-DEV_NOTES.md
-```
-
-## Sécurité
-
-Ne jamais pousser sur GitHub :
-
-```txt
-.env
-.env.local
-.env.production
-.vercel
-node_modules
-.next
-```
-
-Les secrets SMTP doivent rester uniquement dans `.env.local` en local et dans les Environment Variables de Vercel.
+**Context:** Business website development project. Company names, logos and images remain subject to their respective owners' rights.
