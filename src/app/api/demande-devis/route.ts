@@ -275,9 +275,6 @@ const transporter = nodemailer.createTransport({
     user: smtpUser,
     pass: smtpPass,
   },
-  tls: {
-    rejectUnauthorized: false,
-  },
 }); 
 
     const subjectProduct = data.product || data.category || "Demande de devis";
