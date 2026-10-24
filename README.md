@@ -162,7 +162,7 @@ These are the actual repository template keys. The quotation endpoint requires b
 
 ## Known limitations and engineering follow-ups
 
-1. **SMTP certificate verification:** both API handlers currently set Nodemailer's `tls.rejectUnauthorized` to `false`. This weakens TLS security and **must be fixed and validated before real production email use**.
+1. **SMTP certificate verification:** the API handlers now use Nodemailer's standard TLS certificate verification rather than explicitly disabling it. A valid server certificate and real SMTP delivery must still be validated in an authorized environment.
 2. **Abuse protection:** public forms require stronger anti-spam measures such as server-side rate limiting, bot protection and request-size constraints.
 3. **Validation:** the quote endpoint checks required fields and email syntax; contact validation is less strict. A shared schema and explicit input-length constraints would improve consistency.
 4. **No persistent business backend:** enquiries are delivered by email, not stored in a database/CRM or exposed through a tracking dashboard.
